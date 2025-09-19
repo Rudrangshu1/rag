@@ -1,0 +1,8 @@
+streamlit
+langchain
+langchain-community
+langchain-openai
+langchain-milvus
+pymilvus
+docx2txt
+PyPDF2
