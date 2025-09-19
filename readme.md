@@ -66,9 +66,7 @@ Start the Streamlit app:
 streamlit run app.py
 ```
 
-(Replace `app.py` with your script name if different.)
 
----
 
 ##  How It Works
 
@@ -94,7 +92,7 @@ streamlit run app.py
 
 ##  Example Usage
 
-* Upload a sampledoc.txt
+* Upload a sampledoc.csv
 * Ask: *"What are your working hours?"*
 * Bot responds with Our working hours are 9 AM to 6 PM, Monday to Friday.
 
