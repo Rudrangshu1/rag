@@ -24,7 +24,7 @@ st.title("📚 RAG Demo: Upload Docs + MilvusLite + OpenAI")
 
 # Sidebar for document upload
 uploaded_files = st.sidebar.file_uploader(
-    "Upload Documents", accept_multiple_files=True, type=["pdf", "txt", "docx"]
+    "Upload Documents", accept_multiple_files=True, type=["pdf", "txt", "docx", "csv"]
 )
 process_btn = st.sidebar.button("Process Documents")
 
@@ -47,6 +47,8 @@ if process_btn and uploaded_files:
             loader = PyPDFLoader(tmp_path)
         elif uploaded_file.name.endswith(".txt"):
             loader = TextLoader(tmp_path)
+        elif uploaded_file.name.endswith(".csv"):
+            loader = TextLoader(tmp_path)        
         elif uploaded_file.name.endswith(".docx"):
             loader = Docx2txtLoader(tmp_path)
         else:
