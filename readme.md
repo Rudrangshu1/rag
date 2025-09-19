@@ -1,6 +1,6 @@
 
 
-# 📚 RAG Demo: Document Q\&A with Milvus + OpenAI
+# RAG Demo: Document Q\&A with Milvus + OpenAI
 
 This project is a **Retrieval-Augmented Generation (RAG)** demo built with:
 
@@ -17,7 +17,7 @@ It lets you:
 
 ---
 
-## 🚀 Features
+##  Features
 
 * Upload multiple documents at once
 * Automatic chunking of documents for efficient retrieval
@@ -27,7 +27,7 @@ It lets you:
 
 ---
 
-## 🛠️ Installation
+## Installation
 
 Clone the repo and install dependencies:
 
@@ -41,7 +41,7 @@ pip install -r requirements.txt
 
 ---
 
-## 🔑 Setup OpenAI API Key
+##  Setup OpenAI API Key
 
 Set your OpenAI API key in the code or as an environment variable:
 
@@ -58,7 +58,7 @@ OPENAI_API_KEY = "your_api_key_here"
 
 ---
 
-## ▶️ Run the App
+##  Run the App
 
 Start the Streamlit app:
 
@@ -70,7 +70,7 @@ streamlit run app.py
 
 ---
 
-## 📂 How It Works
+##  How It Works
 
 1. **Upload Documents**
 
@@ -92,7 +92,7 @@ streamlit run app.py
 
 ---
 
-## 📝 Example Usage
+##  Example Usage
 
 * Upload a PDF research paper
 * Ask: *"Summarize the key findings"*
@@ -100,7 +100,7 @@ streamlit run app.py
 
 ---
 
-## ⚡ Notes
+##  Notes
 
 * You can change the OpenAI model in the code:
 
