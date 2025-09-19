@@ -43,14 +43,14 @@ pip install -r requirements.txt
 
 ##  Setup OpenAI API Key
 
-Set your OpenAI API key in the code or as an environment variable:
+Need to Set the OpenAI API key in the code or as an environment variable:
 
 ```bash
 export OPENAI_API_KEY="your_api_key_here"   # Linux/Mac
 setx OPENAI_API_KEY "your_api_key_here"     # Windows (PowerShell)
 ```
 
-Alternatively, edit the script and paste your key here:
+Alternatively, we can edit the script and paste the key here:
 
 ```python
 OPENAI_API_KEY = "your_api_key_here"
@@ -94,21 +94,8 @@ streamlit run app.py
 
 ##  Example Usage
 
-* Upload a PDF research paper
-* Ask: *"Summarize the key findings"*
-* Bot responds with a summary from the paper
+* Upload a sampledoc.txt
+* Ask: *"What are your working hours?"*
+* Bot responds with Our working hours are 9 AM to 6 PM, Monday to Friday.
 
 ---
-
-##  Notes
-
-* You can change the OpenAI model in the code:
-
-  ```python
-  llm = ChatOpenAI(model="gpt-4o-mini", temperature=0)
-  ```
-* The Milvus Lite DB is stored in `milvus_demo.db`. Delete it if you want to reset the index.
-* This demo runs **fully local** except OpenAI API calls.
-
----
-to also generate a **`requirements.txt` file** alongside the README so that you have everything ready to run?
