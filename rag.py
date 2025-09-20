@@ -19,8 +19,8 @@ os.environ["OPENAI_API_KEY"] = OPENAI_API_KEY
 
 
 # --- Streamlit UI ---
-st.set_page_config(page_title="RAG with MilvusLite + OpenAI", layout="wide")
-st.title("📚 RAG Demo: Upload Docs + MilvusLite + OpenAI")
+st.set_page_config(page_title="RAG with Milvus + OpenAI", layout="wide")
+st.title("📚 RAG Demo: Upload Docs + Milvus + OpenAI")
 
 # Sidebar for document upload
 uploaded_files = st.sidebar.file_uploader(
@@ -29,7 +29,8 @@ uploaded_files = st.sidebar.file_uploader(
 process_btn = st.sidebar.button("Process Documents")
 
 # Milvus Lite config (local storage)
-MILVUS_URI = "milvus_demo.db"  # this will be a local file
+MILVUS_URI = "https://in03-b078dd0a4e249e4.serverless.aws-eu-central-1.cloud.zilliz.com" 
+MILVUS_TOEKN = "b30183989326bbdde6b40295afd2d905cb4b49347604cc303d2e993aea44821e5a9a7c93186d61629132785bbf3267f8793b98b8"
 COLLECTION_NAME = "rag_docs"
 
 # Initialize embeddings
@@ -64,16 +65,16 @@ if process_btn and uploaded_files:
     splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=200)
     splits = splitter.split_documents(docs)
 
-    # Store in Milvus Lite (local db file)
+    # Store in Milvus
     vectorstore = Milvus.from_documents(
         documents=splits,
         embedding=embeddings,
-        connection_args={"uri": MILVUS_URI},
+        connection_args={"uri": MILVUS_URI, "token": MILVUS_TOEKN, "db_name": "milvus_demo"},
         drop_old=True,  # clear old data if exists
     )
 
     st.session_state.vs = vectorstore
-    st.success("Documents indexed in Milvus Lite ✅")
+    st.success("Documents indexed in Milvus ✅")
 
 # --- Chat Interface ---
 if "vs" in st.session_state:
