@@ -97,3 +97,6 @@ streamlit run app.py
 * Bot responds with Our working hours are 9 AM to 6 PM, Monday to Friday.
 
 ---
+
+<img width="1918" height="1055" alt="image" src="https://github.com/user-attachments/assets/ce396dcd-9f6b-4c18-88a3-c6ba003a6cac" />
+
