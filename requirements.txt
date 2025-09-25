@@ -6,3 +6,4 @@ langchain-milvus
 pymilvus
 docx2txt
 PyPDF2
+pypdf
